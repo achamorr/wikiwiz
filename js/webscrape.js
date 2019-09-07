@@ -1,12 +1,17 @@
 // =======================================================
-// File: wikipedia-rest-search.py
-// Description:  Search Wikimedia REST API for terms
+// File: webscrape.py
+// Description:  Search webpage for queryTerms
 // Created: 09.07.2019
 // Updated: 
 // Author: Andrea Chamorro
 // =======================================================
 
 
+
+
+
+//Stuff for manifest. Put in later
+/*
 "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -21,3 +26,5 @@
           "128": "images/get_started128.png"
         }
     },
+
+*/
