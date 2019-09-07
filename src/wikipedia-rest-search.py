@@ -12,7 +12,7 @@ import urllib, json
 import wikipedia
 
 #===GLOBAL VARIABLES==
-QUERY_TERM = "Babe Ruth"
+QUERY_TERM = "lkfakdsf"
 DEBUG = True
 
 def convertTermToSearchTerm(queryTerm):
@@ -32,7 +32,10 @@ def wikiRestAPISearch(queryTerm, downloadImage = False):
     Using wikipedia Python API: https://www.simplifiedpython.net/wikipedia-api-python/
     downloadImage = if want to download image and return local location as imgURL
     '''
-    page = wikipedia.page(queryTerm)
+    try:
+        page = wikipedia.page(queryTerm)
+    except Exception:
+        return None
 
     #name
     title = page.title
