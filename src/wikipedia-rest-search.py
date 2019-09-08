@@ -12,7 +12,8 @@ import urllib, json
 import wikipedia
 
 #===GLOBAL VARIABLES==
-QUERY_TERM = "lkfakdsf"
+#QUERY_TERM = "lkfakdsf"
+QUERY_TERM = "Babe Ruth"
 DEBUG = True
 
 def convertTermToSearchTerm(queryTerm):
