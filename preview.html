@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>tooltip</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  
+    $(document).ready( function() {
+        $('#tool').tooltip({ selector: "[rel=tooltip]", placement: "bottom", })
+  });
+  </script>
+
+  <style>
+  .tooltip{
+      position: absolute;
+      z-index: 1020;
+      display: block;
+      visibility: visible;
+      padding: 25px;
+      font-size: 13px;
+      width: 250px;
+  }
+
+
+  .tooltip-inner{
+      padding: 10px;
+      color: white;
+      text-align: center;
+      border-radius: 15px;
+      border: 1px solid black;
+  }
+    .tooltip-arrow{
+      position: absolute;
+      width: 1000;
+      height:0
+    }
+    .hover {
+      color: rgba (0, 0, 0, 0.5);
+      border-bottom: 1px solid; 
+
+    }
+
+  </style>
+
+  </head>
+  <body>
+      <h1>Tooltip Demo</h1>     
+    <!--<div class="container">-->
+      <!--<div class="tool">-->
+        <!--<a title="Text here" data-html="true" rel="tooltip" href="#">Tooltip exercise!</a>-->
+      <!--</div>-->
+    <!--</div>-->
+      <p id="tool">Hello this is lots of text here, check <span title="<h1>a puppy</h1><img src='https://pbs.twimg.com/profile_images/421624037958119424/_XOMh-DP.jpeg' width='80px;'><p>Check out some info</p>" 
+          data-html="true" 
+          rel="tooltip">ME</span> out boii.</p>
+  </body>
+</html>
