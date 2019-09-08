@@ -15,6 +15,7 @@ def processPOST():
     #process
     jsonText = implementWikiApiAll(queryList)
 
+    
 
 if __name__ == "__main__":
     app.run()
