@@ -28,7 +28,7 @@ def wikiRestSimpleSearch(queryTerm):
 
     print (reads)
 
-def wikiRestAPISearch(queryTerm, downloadImage = False):
+def wikiPythonAPISearch(queryTerm, downloadImage = False):
     '''
     Using wikipedia Python API: https://www.simplifiedpython.net/wikipedia-api-python/
     downloadImage = if want to download image and return local location as imgURL
@@ -37,6 +37,12 @@ def wikiRestAPISearch(queryTerm, downloadImage = False):
         page = wikipedia.page(queryTerm)
     except Exception:
         return None
+
+    #init
+    title = "None"
+    url= "None"
+    summary = "None
+    imageLoc = "None"
 
     #name
     title = page.title
@@ -75,17 +81,38 @@ def wikiRestAPISearch(queryTerm, downloadImage = False):
         os.rename(localPath, newPath)
         imageLoc = newPath
 
-
+    #to Json
     if DEBUG:
         print (title, url, summary, imageLoc)
 
     return (title, url, summary, imageLoc)
+       
+        
+def implementWikiApiAll(queryList):
+    try:
+        dictAllTerms = {"content": []}
+        for queryTerm in queryList:
+            if queryTerm not in dictAllTerms.keys():
+                title, url, summary, imageLoc = wikiPythonAPISearch(queryTerm)
+
+                #define
+                dict_data = {
+                "queryTerm": queryTerm,
+                "title": title,
+                "url": url,
+                "summary": summary,
+                "imageLoc": imageLoc
+                }
+                dictAllTerms["content"].append(dict_data)
+        return json.dumps(dictAllTerms, indent = 4)
+    except:
+        return json.dumps({"content" : []]})
 
 
 
 if __name__ == "__main__":
     #wikiRestSimpleSearch(QUERY_TERM)
-    wikiRestAPISearch(QUERY_TERM, downloadImage= True)
+    wikiPythonAPISearch(QUERY_TERM, downloadImage= True)
 
 
 
