@@ -3,6 +3,18 @@
 
 A chrome extension for wikipedia hoverable define.
 
+## Inspiration
+For many developers, Wikipedia is our go-to when learning new conceptual information. It allows easy previewing of Wikipedia information on a topic on the-fly. You don't even have to open a new tab, instead it displays an easy hover-able tool tip with the Wikipage abstract and a helpful jpg to go with it.
+
+We thought this useful feature could also save you time even when you're not on Wikipedia, and will let you learn new topics you normally wouldn't bother to open a browser and scroll a webpage for, without changing anything about your workflow.
+
+Take Wikipedia preview with you wherever you browse!
+
+Hover, read, and learn, with our just-in-time Wikipedia extension.
+
+## What it does
+It displays Wikipedia information on places, people, and things of your interest in your browser.
+
 
 ## PennApps Team 2019
 This code was made by the following person(s) with ❤️
